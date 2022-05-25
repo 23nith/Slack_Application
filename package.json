@@ -1,7 +1,8 @@
 {
-  "name": "slack-app",
+  "homepage": "https://23nith.github.io/slack_application",
+  "name": "slack_application",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11.8.2",
@@ -26,7 +27,9 @@
     "start": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.8",
     "tailwindcss": "^3.0.23"
   },

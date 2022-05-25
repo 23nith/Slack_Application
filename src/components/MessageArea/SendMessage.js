@@ -28,7 +28,7 @@ const SendMessage = ({myfunc}) => {
             }
         }
 
-        axios.post(`${env.API_URL}/messages`, bodyContents, requestHeaders)
+        axios.post(`http://206.189.91.54/api/v1/messages`, bodyContents, requestHeaders)
         .then((response) => {
             console.log("Success axios", response)
             setMessageToSend("")

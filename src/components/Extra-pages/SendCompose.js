@@ -39,7 +39,7 @@ export default function SendCompose({
 
     try {
       const req = await axios.post(
-        `${env.API_URL}/messages`,
+        `http://206.189.91.54/api/v1/messages`,
         {
           receiver_id: composeDescription.recieverId,
           receiver_class: "User",

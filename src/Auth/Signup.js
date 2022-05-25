@@ -27,7 +27,7 @@ export default function Signup({ setToggleSignup, setToggleLogin }) {
         // show the spinner
         setLoading(true);
         let res = await axios
-          .post(`${env.API_URL}/auth`, {
+          .post(`http://206.189.91.54/api/v1/auth`, {
             email,
             password,
             nickname: userName,

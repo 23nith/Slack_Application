@@ -25,7 +25,7 @@ const SubMenu = ({ showSubMenu }) => {
     if (user !== undefined) {
       const responseBody = await axios({
         url: "channels",
-        baseURL: `${env.API_URL}`,
+        baseURL: `http://206.189.91.54/api/v1`,
         method: "get",
         headers: {
           expiry: user.expiry,

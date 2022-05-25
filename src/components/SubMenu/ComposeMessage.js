@@ -19,7 +19,7 @@ export default function ComposeMessage() {
       try {
         // get all users
         const data = await axios
-          .get(`${env.API_URL}/users`, {
+          .get(`http://206.189.91.54/api/v1/users`, {
             headers: {
               "access-token": user["access-token"],
               client: user.client,

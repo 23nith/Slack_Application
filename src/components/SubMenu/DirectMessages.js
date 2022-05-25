@@ -19,7 +19,7 @@ const DirectMessages = () => {
 
             const getUsers = axios({
                 url: "/users",
-                baseURL: `${env.API_URL}`,
+                baseURL: `http://206.189.91.54/api/v1`,
                 method: 'get',
                 headers: {
                     "expiry": user.expiry,
@@ -48,7 +48,7 @@ const DirectMessages = () => {
             allUsers.map((theUser)=>{
                 const responseBody = axios({
                     url: "/messages",
-                    baseURL: `${env.API_URL}`,
+                    baseURL: `http://206.189.91.54/api/v1`,
                     method: 'get',
                     params: {
                         receiver_id: theUser.id,

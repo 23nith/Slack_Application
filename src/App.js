@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useTransition } from "react-spring";
 import AuthProvider, { useAuthProvider } from "./States/AuthProvider";
 import { authInitialState, AuthReducer } from "./States/Reducers/AuthReducer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Auth from "./Auth/Auth";
 import { Alert, AlertIcon, Spinner } from "@chakra-ui/react";
 import PrivateRoute from "./Auth/PrivateRoute";
@@ -36,7 +36,7 @@ function App() {
       try {
         // get all users
         const data = await axios
-          .get(`${env.API_URL}/users`, {
+          .get(`http://206.189.91.54/api/v1/users`, {
             headers: {
               "access-token": user["access-token"],
               client: user.client,
@@ -91,7 +91,7 @@ function App() {
 
   return (
     // Auth set up
-    <BrowserRouter>
+    <Router>
       <div className="w-full h-full bg-gray-600">
         <ChannelDatailsProvider
           reducer={channelReducer}
@@ -146,7 +146,7 @@ function App() {
           </AuthProvider>
         </ChannelDatailsProvider>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

@@ -38,7 +38,7 @@ export default function Login({
       // Spinner appear
       setIsloading(true);
       let res = await axios
-        .post(`${env.API_URL}/auth/sign_in`, userInfo)
+        .post(`http://206.189.91.54/api/v1/auth/sign_in`, userInfo)
         .then(( data ) => {
           // Spinner done when request completed
           setIsloading(false);
